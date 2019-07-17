@@ -1,8 +1,14 @@
+buildscript {
+	dependencies {
+		classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7.1"
+	}
+}
+
 plugins {
 	id 'org.springframework.boot' version '2.2.0.M4'
 	id 'java'
 }
-
+apply plugin: 'org.sonarqube'
 apply plugin: 'io.spring.dependency-management'
 
 group = 'com.sonar'
